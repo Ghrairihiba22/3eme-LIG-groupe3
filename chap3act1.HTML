@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+
+
+    <div id="root"></div>
+    <script type="text/babel">
+    
+        const date = new Date();
+         let heure =date.getHours();
+        let a='';
+         const monStyle={
+            fontSize: 100 
+        }
+      if (heure>5 && heure<11) {
+      a+='bonjour' monStyle.color="#04567F" 
+       } 
+        else if (heure>11 && heure<18) {
+         a+='bonne apres midi' monStyle.color="#0914A3"
+      } 
+      else {
+    a+='bonne nuit'monStyle.color="#D90000"
+
+  } 
+  return  (
+    <div  style={monStyle}> 
+        {a}
+    </div>
+  )
+
+
+        
+  ReactDOM.render(Date, document.getElementById("root"));
